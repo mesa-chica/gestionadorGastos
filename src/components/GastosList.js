@@ -2,8 +2,8 @@ const GastosLista = ({ gastos }) => {
   return (
     <>
       <div className="mb-10">
+        <p>Filtrar por gasto:</p>
         <p>Filtrar por fecha:</p>
-        {/* Seleccionador de fecha */}
       </div>
       <ul>
         {gastos.map((gasto) => {

@@ -1,7 +1,13 @@
 "use client";
 
 import Input from "@/components/Input";
+import CategoirasList from "@/components/CategoriasList";
 import GastosList from "@/components/GastosList";
+
+const DUMMY_CATEGORIAS = [
+  { id: 1, nombre: "Casa" },
+  { id: 2, nombre: "Trabajo" },
+];
 
 const DUMMY_GASTOS = [
   { id: "1", nombre: "Comida", precio: 100, fecha: new Date("2024-02-01") },
@@ -23,9 +29,12 @@ export default function Gastos() {
   return (
     <div className="flex items-center flex-col flex-grow mt-12">
       <Input width="3/6" placeholder="Gasto" isAdd />
-      <div className="w-4/5 mt-12">
-        <GastosList gastos={DUMMY_GASTOS} />
+      <div className="w-3/5 mt-12">
+        <CategoirasList categorias={DUMMY_CATEGORIAS} />
       </div>
+      {/* <div className="w-4/5 mt-12">
+        <GastosList gastos={DUMMY_GASTOS} />
+      </div> */}
     </div>
   );
 }
